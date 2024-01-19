@@ -1,0 +1,59 @@
+---
+title: "Spotify_songs"
+author: '36539882'
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(readr)
+library(stringr)
+library(hflights)
+library(tidyr)
+library(lubridate)
+library(ggplot2)
+```
+
+```{r}
+df <- read.csv("spotify_songs.csv")
+head(df)
+glimpse(df)
+summary(df)
+
+genre_factors <- table(df$playlist_genre)
+genre_factors
+
+df$playlist_genre <- factor(df$playlist_genre)
+
+df
+
+
+```
+
+
+genre - energy
+```{r}
+ggplot(df, aes(x = playlist_genre, y = energy, fill = playlist_genre)) +
+  geom_boxplot(color = "black", outlier.shape = 1, outlier.size = 3, notch = TRUE) +
+  labs(title = "Energy Distribution Across Playlist Genre", x = "Playlist Genre", y = "Energy") +
+  scale_fill_manual(values = c("#1DB954", "#1DB954", "#1DB954", "#1DB954", "#1DB954", "#1DB954")) + 
+  theme_minimal() +
+  theme(legend.position = "none") 
+
+
+```
+
+
+```{r}
+ggplot(df, aes(x = danceability, y = track_popularity, color = energy)) +
+  geom_point(size = 3, alpha = 0.7) +
+  scale_color_gradient(low = "blue", high = "red") +
+  labs(title = "Popularity vs. Danceability",
+       x = "Danceability",
+       y = "Track Popularity",
+       color = "Energy") +
+  theme_minimal()
+```
+
+
