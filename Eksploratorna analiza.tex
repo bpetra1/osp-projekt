@@ -1,8 +1,38 @@
 \chapter{Eksploratorna analiza}
 
 \section{Opis atributa}
-opis atributa....
-
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|p{8cm}|}
+	\hline
+	\textbf{Atribut} & \textbf{Tip podatka} & \textbf{Opis} \\ \hline
+	track\_id & character & Jedinstveni ID pjesme \\ \hline
+	track\_name & character & Naziv pjesme \\ \hline
+	track\_artist & character & Izvođač pjesme \\ \hline
+	track\_popularity & double & Popularnost pjesme (0-100) \\ \hline
+	track\_album\_id & character & Jedinstveni ID albuma \\ \hline
+	track\_album\_name & character & Naziv albuma na kojem se nalazi pjesma \\ \hline
+	track\_album\_release\_date & character & Datum izlaska albuma \\ \hline
+	playlist\_name & character & Naziv playliste \\ \hline
+	playlist\_id & character & Jedinstveni ID playliste \\ \hline
+	playlist\_genre & character & Žanr playliste \\ \hline
+	playlist\_subgenre & character & Podžanr playliste \\ \hline
+	danceability & double & Plesnost (koliko je pjesma prikladna za plesanje u rasponu 0.0-1.0) \\ \hline
+	energy & double & Energičnost (perceptualna mjera intenziteta i aktivnosti u rasponu 0.0-1.0) \\ \hline
+	key & double & Ukupni tonalitet pjesme \\ \hline
+	loudness & double & Glasnoća pjesme u decibelima \\ \hline
+	mode & double & Modus pjesme (1 - veliki, 0 - mali) \\ \hline
+	speechiness & double & Prisutnost izgovorenih riječi u pjesmi \\ \hline
+	acousticness & double & Mjera povjerenja je li pjesma akustična u rasponu od 0.0 do 1.0 \\ \hline
+	instrumentalness & double & Sadrži li pjesma vokale \\ \hline
+	liveness & double & Detektira prisutnost publike u snimci \\ \hline
+	valence & double & Mjera od 0.0 do 1.0 koja opisuje glazbenu pozitivnost koju prijenosi pjesma \\ \hline
+	tempo & double & Ukupno procijenjeni tempo pjesme u udarcima po minuti (BPM) \\ \hline
+	duration\_ms & double & Trajanje pjesme u milisekundama \\ \hline
+	\end{tabular}
+	\caption{Opis tablice podataka o glazbi}
+	\label{tab:glazba}
+	\end{table}
 \section{Proces učitavanja i prilagodbe podataka}
 
 	\subsubsection{Proces učitavanja podataka}
