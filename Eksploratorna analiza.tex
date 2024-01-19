@@ -7,40 +7,23 @@ opis atributa....
 
 	\subsubsection{Proces učitavanja podataka}
 	
-	\textbf{Opis grafa:}
-	
-	Ovaj graf prikazuje histogram popularnosti. Prikazuje distribuciju popularnosti pjesama. Na x-osi nalaze se razine popularnosti pjesama, a y-osi broj pjesama koje se nalaze u pojedinoj razini popularnosti.
-	Ovaj histogram omogućava vizualni pregled koje su razine popularnosti češće, a koje rjeđe. 
-	
-	\textbf{Slika grafa:}
-	\begin{figure}[H]
-		\includegraphics[scale=0.9]{slike/Histogram of song popularity.png}
-		%veličina slike u odnosu na originalnu datoteku i pozicija slike
-		\centering
-		\caption{Histogram of song popularity}
+		\textbf{Učitavanje podataka:}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.9]{slike/ucitavanje.png}
+			% Veličina slike u odnosu na originalnu datoteku i pozicija slike
+			\caption{\textbf{Učitavanje podataka u R-u}}
+		\end{figure}
 		
-	\end{figure}
+		U prikazanom kodu sa slike, koristimo različite R pakete kako bismo pripremili i istražili skup podataka "spotify\_songs.csv". Prvo, koristimo pakete poput \textbf{readr}, \textbf{dplyr} i \textbf{stringr} za čitanje i manipulaciju podacima. Nakon toga, prikazujemo prvih nekoliko redova podataka pomoću funkcije \textbf{head} kako bismo dobili inicijalni uvid u strukturu podataka.
+		
+		Zatim, koristimo funkciju \textbf{glimpse} za detaljniji pregled strukture podataka, prikazujući informacije o varijablama, njihovim tipovima podataka i prvim redovima podataka. Na kraju, koristimo funkciju \textbf{summary} kako bismo dobili osnovne statističke informacije o numeričkim varijablama u skupu podataka.
+		
+		Ovi koraci omogućuju nam osnovni uvid u strukturu podataka prije nego što nastavimo s daljnjom analizom i vizualizacijom.
+
 	
 	\subsubsection{Proces prilagodbe podataka}
 	
-	\textbf{Opis grafa:}
-	
-	Ovaj graf prikazuje deset najpopularnijih glazbenih izvođača temeljem prosječne popularnosti njihovih pjesama. Izračunata je srednja vrijednost popularnosti za svakog izvođača po njegovim pjesmama, a zatim su odabrani najbolji deset izvođača prema toj mjeri popularnosti.
-	
-	Na x-osi su navedeni izvođači, poredani prema visini prosječne popularnosti, dok y-os prikazuje prosječnu popularnost. Svaki šareni stupac predstavlja jednog izvođača, a visina stupa označava njegovu prosječnu popularnost.
-	
-	Ovaj graf pruža brz i pregledan način usporedbe popularnosti izvođača, omogućujući identifikaciju najboljih deset temeljem prosjeka popularnosti njihovih pjesama.
-	
-	\textbf{Slika grafa:}
-	\begin{figure}[H]
-		\includegraphics[scale=0.9]{slike/Top 10 popularity}
-		%veličina slike u odnosu na originalnu datoteku i pozicija slike
-		\centering
-		\caption{Top 10 Artists Based on Popularity}
-		
-	\end{figure}
-
-
 
 
 
