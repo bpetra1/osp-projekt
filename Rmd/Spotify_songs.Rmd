@@ -1,6 +1,6 @@
 ---
 title: "Spotify_songs"
-author: '36539882'
+author: ''
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -21,23 +21,15 @@ head(df)
 glimpse(df)
 summary(df)
 
-genre_factors <- table(df$playlist_genre)
-genre_factors
-
-df$playlist_genre <- factor(df$playlist_genre)
-
-df
-
-
 ```
 
 
 genre - energy
 ```{r}
 ggplot(df, aes(x = playlist_genre, y = energy, fill = playlist_genre)) +
-  geom_boxplot(color = "black", outlier.shape = 1, outlier.size = 3, notch = TRUE) +
+  geom_boxplot(color = "black") +
   labs(title = "Energy Distribution Across Playlist Genre", x = "Playlist Genre", y = "Energy") +
-  scale_fill_manual(values = c("#1DB954", "#1DB954", "#1DB954", "#1DB954", "#1DB954", "#1DB954")) + 
+  scale_fill_manual(values = c("green", "green", "green", "green", "green", "green")) + 
   theme_minimal() +
   theme(legend.position = "none") 
 
@@ -60,9 +52,9 @@ Ovaj vizualni prikaz pomaže razumjeti raspon energije unutar različitih žanro
 
 ```{r}
 ggplot(df, aes(x = danceability, y = energy, color = track_popularity)) +
-  geom_point(alpha = 0.7) +
-  labs(title = "Danceability vs. Energy with Popularity Color", x = "Danceability", y = "Energy", color = "Popularity") +
-  scale_color_continuous(name = "Popularity", low = "blue", high = "red") +
+  geom_point(alpha = 0.9) +
+  labs(title = "Danceability and Energy with Popularity Color", x = "Danceability", y = "Energy", color = "Popularity") +
+  scale_color_continuous(name = "Popularity", low = "green", high = "red") +
   theme_minimal()
 
 ggsave("Dance-Energy-popularity.png", bg = "white")
@@ -83,13 +75,14 @@ Graf pruža uvid u raznolikost glazbenih preferencija te naglašava da glazbene 
 ```{r}
 df_subgenres <- df %>% group_by(playlist_genre, playlist_subgenre) %>% summarise(count = n())
 ggplot(df_subgenres, aes(x = playlist_genre, y = count, fill = playlist_subgenre)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.7, color = "white") +
-  labs(title = "Distribution of Genres with Subgenres", x = "Genre", y = "Subgenre") +
-  theme_minimal() +
+  geom_bar(stat = "identity", position = "stack", width = 0.95, color = "white") +
+  labs(title = "Distribution of Genres with Subgenres", x = "Genre", y = "Count") +
   theme(
     legend.position = "right",
-    axis.text.x = element_text(angle = 45, hjust = 1)
-  ) +   guides(fill = guide_legend(title = "Subgenre"))
+    axis.text.x = element_text(angle = 60, hjust = 1)
+  ) +
+  guides(fill = guide_legend(title = "Subgenre")) 
+
 
 ggsave("Genre-Subgenre.png", bg = "white")
 
@@ -111,25 +104,15 @@ top_artists <- df %>%
   summarise(avg_popularity = mean(track_popularity)) %>%
   top_n(10, avg_popularity)
 
-# Plotting the bar chart
 ggplot(top_artists, aes(x = reorder(track_artist, -avg_popularity), y = avg_popularity, fill = track_artist)) +
   geom_bar(stat = "identity") +
   labs(title = "Top 10 Artists Based on Popularity", x = "Artist", y = "Average Popularity") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
-ggsave("Top 10 popularity.png", bg = "white")
+ggsave("Top 10 populari.png", bg = "white")
 
 ```
-**Naziv grafa:** Top 10 Izvođača prema Popularnosti
-
-**Opis:**
-Ovaj bar graf prikazuje deset najpopularnijih glazbenih izvođača temeljem prosječne popularnosti njihovih pjesama. Izračunata je srednja vrijednost popularnosti za svakog izvođača, a zatim su odabrani najbolji deset izvođača prema toj mjeri popularnosti.
-
-Na x-osi su navedeni izvođači, poredani prema visini prosječne popularnosti, dok y-osa pokazuje tu prosječnu popularnost. Svaki šareni stupac predstavlja jednog izvođača, a visina stupa označava njegovu prosječnu popularnost.
-
-Ovaj graf pruža brz i pregledan način usporedbe popularnosti izvođača, omogućujući identifikaciju najboljih deset temeljem prosjeka popularnosti njihovih pjesama. Nagib x-osi doprinosi čitljivosti, posebice kada imena izvođača imaju duljinu. Grafički prikaz pomaže prepoznati izvođače čija glazba ima najveći prosječni doseg popularnosti.
-
 
 
 
