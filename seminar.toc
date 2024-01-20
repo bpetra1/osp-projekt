@@ -1,0 +1,18 @@
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{\numberline {1}Uvod}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Opis projekta}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Eksploratorna analiza}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Opis atributa}{4}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Proces učitavanja i prilagodbe podataka}{5}{section.3.2}%
+\contentsline {subsubsection}{Proces učitavanja podataka}{5}{subsubsection*.2}%
+\contentsline {subsubsection}{Proces prilagodbe podataka}{6}{subsubsection*.3}%
+\contentsline {section}{\numberline {3.3}Vizualizacija Podataka}{6}{section.3.3}%
+\contentsline {subsubsection}{1) Histogram of song popularity}{6}{subsubsection*.4}%
+\contentsline {subsubsection}{2) Top 10 Artists Based on Popularity}{7}{subsubsection*.5}%
+\contentsline {subsubsection}{3) Average popularity of songs per year}{7}{subsubsection*.6}%
+\contentsline {subsubsection}{4) Energy Distribution Across Playlist Genre}{8}{subsubsection*.7}%
+\contentsline {subsubsection}{5) Distribution of Genres and Subgenres}{9}{subsubsection*.8}%
+\contentsline {subsubsection}{6) The relationship between energy and valence by genre}{10}{subsubsection*.9}%
+\contentsline {subsubsection}{7) Danceability and Energy with Popularity}{11}{subsubsection*.10}%
+\contentsline {subsubsection}{8) Histogram of song durations}{12}{subsubsection*.11}%
+\contentsline {chapter}{\numberline {4}Zaključak}{14}{chapter.4}%
