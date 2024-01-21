@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.27)  21 JAN 2024 01:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.27)  21 JAN 2024 13:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1446,10 +1446,10 @@ l.203
 <slike/corrplot.png, id=145, 505.89pt x 361.35pt>
 File: slike/corrplot.png Graphic file (type png)
 <use slike/corrplot.png>
-Package pdftex.def Info: slike/corrplot.png  used on input line 212.
+Package pdftex.def Info: slike/corrplot.png  used on input line 213.
 (pdftex.def)             Requested size: 455.29678pt x 325.21199pt.
 
-Overfull \hbox (19.68599pt too wide) in paragraph at lines 212--215
+Overfull \hbox (19.68599pt too wide) in paragraph at lines 213--216
  [][] 
  []
 
@@ -1466,12 +1466,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.218 	
+l.219 	
         <./slike/Histogram of song durations.png>]
 <slike/vif.png, id=153, 392.06474pt x 90.93974pt>
 File: slike/vif.png Graphic file (type png)
 <use slike/vif.png>
-Package pdftex.def Info: slike/vif.png  used on input line 225.
+Package pdftex.def Info: slike/vif.png  used on input line 226.
 (pdftex.def)             Requested size: 352.855pt x 81.84499pt.
 
 
@@ -1487,18 +1487,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.233 	
-       
+l.235 	S
+        ada ćemo konačno stvoriti linearni model. Kao što je prije navede...
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.233 	
-        <./slike/corrplot.png (PNG copy)> <./slike/vif.png>]
+l.235 	S
+        ada ćemo konačno stvoriti linearni model. Kao što je prije navede...
+ <./slike/corrplot.png (PNG copy)> <./slike/vif.png>]
 <slike/linReg.png, id=162, 377.61075pt x 399.29175pt>
 File: slike/linReg.png Graphic file (type png)
 <use slike/linReg.png>
-Package pdftex.def Info: slike/linReg.png  used on input line 239.
+Package pdftex.def Info: slike/linReg.png  used on input line 240.
 (pdftex.def)             Requested size: 339.84653pt x 359.35925pt.
 
 
@@ -1514,8 +1516,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.249 \eject
-             <./slike/linReg.png>])
+l.251 	
+        <./slike/linReg.png>]
+Overfull \hbox (11.84166pt too wide) in paragraph at lines 252--253
+[]\OT1/jkp/m/n/12 Sada []cemo pomo[]cu ko-riste[]ci mo-del koji je is-tre-ni-ra
+n nad tre-ning sku-pom poku[]sati
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16])
 \openout2 = `Zaključak.aux'.
 
  (./Zaključak.tex
@@ -1528,7 +1544,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16
+[17
 
 
 
@@ -1545,20 +1561,22 @@ Package rerunfilecheck Info: File `seminar.out' has not changed.
 (rerunfilecheck)             Checksum: E93939A971CAF6C266ACD7CE54317966;1116.
  ) 
 Here is how much of TeX's memory you used:
- 17875 strings out of 474398
- 293157 string characters out of 5754205
+ 17878 strings out of 474398
+ 293177 string characters out of 5754205
  1942036 words of memory out of 5000000
  39605 multiletter control sequences out of 15000+600000
- 585207 words of font info for 91 fonts, out of 8000000 for 9000
+ 585978 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,14n,93p,486b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,14n,93p,571b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb><c:/texliv
-e/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb><c:/texlive/2023/texm
-f-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb>
-Output written on seminar.pdf (17 pages, 2935018 bytes).
+e/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb><c:/texlive/2023/texmf-d
+ist/fonts/type1/public/kpfonts/jkpmit8a.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/public/kpfonts/jkpmn8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
+kpfonts/jkpsy.pfb>
+Output written on seminar.pdf (18 pages, 2949003 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 162 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 50 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

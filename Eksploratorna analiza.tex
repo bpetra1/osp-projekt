@@ -205,6 +205,7 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 \section{Prediktivni modeli}
 
 	U nastavku bit će opisan rad s osnovnim prediktivnim modelima: linearna regresija te kNN klasifikacijski model. 
+	
 	Linearna regresija koristi se za predviđanje vrijednosti varijable s obzirom na vrijednosti jedne ili više drugih. Za određivanje koeficijenata smjera koristi se metoda najmanjih kvadrata. U nastavku pokušat ćemo predvidjeti vrijednost varijable \textit{Energy} s pomoću ostalih numeričkih varijabli iz našeg podatkovnog skupa, tj.koristit ćemo višestruku (multiplu) linearnu regresiju.
 	Za početak provjerit ćemo vrijednosti kolinearnosti ulaznih varijabli.
 	
@@ -216,8 +217,8 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 		
 	\end{figure}
 	
-	Možemo primijetiti da \textit{Energy} i \textit{Loudness} imaju poprilično visoku pozitivnu korelaciju, što je i očekivano. \textit{Danceability} i \textit{Valence} također imaju pozitivnu korelaciju, međutim s manjom vrijednosti, što nam govori da je moguće da "plesne" pjesme imaju veću valenciju, tj. pozitivnost.
-	S druge strane, \textit{Acousticness} i \textit{Energy} te \textit{Acousticness} i \textit{Loudness} imaju negativnu korelaciju, što znači da akustične trake većinom imaju manju energiju te manju glasnoću.
+	Možemo primijetiti da nema prevelikih kolinearnosti, a vidimo da npr. \textit{valence} i \textit{danceability} imaju  pozitivnu korelaciju, što nam govori da je moguće da "plesne" pjesme imaju veću valenciju, tj. pozitivnost.
+	S druge strane, \textit{acousticness} i \textit{loudness} imaju negativnu korelaciju, što znači da akustične trake većinom imaju manju glasnoću.
 	
 	Za provjeru moguće multikolinearnosti koristit ćemo VIF mjeru koju ćemo izračunati i čiji rezultat se nalazi u nastavku:
 	
@@ -231,8 +232,8 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 	
 	Na temelju izračunatih vrijednosti možemo zaključiti da vrlo vjerojatno nema multikolinearnosti ulaznih varijabli
 	
-	Sada ćemo konačno stvoriti linearni model. Kao što je prije navedeno, varijabla \textit{Energy} bit će izlaz, a preostale numeričke varijable ulaz.
-	Podatkovni okvir razdijeljen je u 2 dijela, jedan za treniranje te jedan za testiranje modela metodom nasumičnog odabira. Veličina okvira za treniranje je 70\% originalnog podatkovnog skupa. 
+	Sada ćemo konačno stvoriti linearni model. Kao što je prije navedeno, varijabla \textit{energy} bit će izlaz, a preostale numeričke varijable ulaz.
+	Podatkovni okvir razdijeljen je u 2 dijela, jedan za treniranje te jedan za testiranje modela. Veličina okvira za treniranje je 70\% originalnog podatkovnog skupa. 
 	U nastavku prvo slijedi sažetak korištenog linearnog modela.
 	
 	\begin{figure}[H]
@@ -243,9 +244,12 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 		
 	\end{figure}
 	
+	Možemo vidjeti da su \textit{danceability, loudness, acousticness, instrumentalness, livenes} i \textit{valence} jako statistički značajni u ovome modelu, \textit{key} ima manje statistički značajan utjecaj, dok \textit{mode} i \textit{speechiness} vrlo vjerojatno nemaju statističkog utjecaja na ovaj model, zbog visoke p-vrijednosti.
+	Rezidualna standardna pogreška (RSE) nam govori koliko u prosjeku model promašuje kod predviđanja izlazne varijable \textit{energy}, a vidimo da iznosi 0.1115.
+	\textit{Multiple R-squared} i \textit{Adjusted R-squared} iznose 0.6319, odnosno 0.6317. R-kvadrat nam govori o količini varijabilnosti koja je objašnjena modelom, a u našem modelu možemo zaključiti da je otprilike 63\% varijabilnosti varijable \textit{energy} objašnjeno modelom. Kako smo koristili višestruku linearnu regresiju više pažnje obratit ćemo na prilagođenu R-kvadrat vrijednost koja prilagođava R-kvadrat mjeru zbog broja prediktora u modelu, međutim vidimo da su otprilike iste.
+	Konačno, F-statistika s p-vrijednosti manjom od \(2.2 \times 10^{-16}\) nam govori da je model statistički značajan u objašnjavanju izlazne varijable.
 	
-	........sutra nastavak..........
-
+	Sada ćemo pomoću koristeći model koji je istreniran nad trening skupom pokušati procijeniti vrijednosti varijable \textit{energy} u testnom podatkovnom okviru. Kako bismo provjerili kvalitetu našeg modela, iskoristit ćemo RMSE (\textit{engl. root mean square error}) mjeru koja iznosi 0.1138, što je otprilike isto kao kod rezidualne pogreške
 \eject
 
 

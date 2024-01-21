@@ -16,4 +16,4 @@
 \contentsline {subsubsection}{7) Danceability and Energy with Popularity}{11}{subsubsection*.10}%
 \contentsline {subsubsection}{8) Histogram of song durations}{12}{subsubsection*.11}%
 \contentsline {section}{\numberline {3.4}Prediktivni modeli}{13}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Zaključak}{16}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Zaključak}{17}{chapter.4}%
