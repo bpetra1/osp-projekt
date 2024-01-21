@@ -1,0 +1,136 @@
+---
+title: "Spotify"
+author: "Ante Sorić"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+---
+
+
+```{r include=FALSE}
+library(tidyverse)
+library(gridExtra)
+library(GGally)
+library(ggrepel)
+library(caret)
+library(dplyr)
+library(corrplot)
+library(car)
+knitr::opts_chunk$set(results = 'hold')
+```
+
+```{r}
+spotify <- read_csv("spotify_songs.csv")
+head(spotify)
+```
+
+```{r}
+colSums(is.na(spotify))
+spotify %>% filter(is.na(spotify$track_name))
+```
+
+
+```{r}
+spotify %>% group_by(playlist_genre) %>%  summarise(avgTrackPopularity = mean(track_popularity)) -> genrePopularity
+spotify %>% group_by(playlist_genre, playlist_subgenre) %>%  summarise(avgTrackPopularity = mean(track_popularity)) -> subgenrePopularity
+
+ggplot(genrePopularity, aes(x = reorder(playlist_genre, avgTrackPopularity), y = avgTrackPopularity, fill = playlist_genre)) +
+  geom_col() +
+  guides(fill = "none") +
+  labs(title = "Average track popularity by genre", x = "Playlist genre", y = "Average track popularity")
+
+ggplot(subgenrePopularity, aes(x = reorder(playlist_subgenre, avgTrackPopularity), y = avgTrackPopularity, fill = playlist_genre)) + geom_col() + theme(axis.text.x = element_text(angle = 90)) + labs(title = "Average track popularity by subgenre", x = "Playlist subgenre", y = "Average track popularity")
+
+```
+```{r}
+ggplot(spotify, aes(x = energy, y = danceability, color = instrumentalness)) + geom_point(alpha = 0.5) + scale_color_viridis_c()
+```
+
+```{r}
+ggplot(spotify, aes(x = danceability, y = energy)) + 
+  geom_point(aes(color = valence), alpha = 0.7) +
+  scale_color_gradient(low = "blue", high = "red") +
+  labs(title = "Danceability vs. Energy", x = "Danceability", y = "Energy", color = "Valence")
+```
+
+```{r}
+ggplot(spotify, aes(x = acousticness)) +
+  geom_histogram(fill = "skyblue", color = "black", bins = 30) +
+  labs(title = "Distribution of Acousticness", x = "Acousticness", y = "Frequency")
+```
+```{r}
+spotify %>% select(-c(playlist_id, playlist_genre, playlist_subgenre, playlist_name)) %>% distinct() -> spotify_filtered
+spotify_filtered %>% head()
+```
+
+```{r}
+spotify %>% group_by(track_id) %>% summarise(genre = names(which.max(table(playlist_genre)))) -> spotify
+```
+
+
+```{r}
+spotify <- inner_join(spotify, spotify_filtered, by = "track_id")
+```
+```{r}
+spotify$genre <- as.factor(spotify$genre)
+```
+
+
+```{r}
+set.seed(1234)
+train_size <- 0.7 * nrow(spotify) %>% round
+train_ind <- sample(1:nrow(spotify), train_size)
+
+spotify.train <- spotify[train_ind, ]
+spotify.test <- spotify[-train_ind, ]
+
+lm_model <- lm(energy ~ danceability + key + loudness + mode + speechiness + acousticness + instrumentalness + liveness + valence + tempo, spotify.train)
+summary(lm_model)
+vif(lm_model)
+```
+```{r}
+spotify.train$predictedEnergy <- predict(lm_model, spotify.train)
+spotify.test$predictedEnergy <- predict(lm_model, spotify.test)
+RMSE(spotify.train$energy, spotify.train$predictedEnergy)
+RMSE(spotify.test$energy, spotify.test$predictedEnergy)
+```
+
+
+```{r}
+spotifyNorm <- lapply(spotify, function(x) {
+  if (is.numeric(x)) (x - mean(x))/sd(x)
+  else x
+}) %>% as.data.frame
+spotifyNorm.train <- spotify[train_ind, ]
+spotifyNorm.test <- spotify[-train_ind, ]
+```
+
+```{r}
+spotify %>% select_if(is.numeric) %>% select(-energy) %>% cor()
+```
+
+```{r}
+spotify %>% select_if(is.numeric) %>% select(-energy) %>% cor() %>% corrplot()
+```
+
+
+```{r}
+knnModel <- knn3(genre ~ energy + danceability + key + loudness + mode + speechiness + acousticness + instrumentalness + liveness + valence + tempo, k = 5, spotifyNorm.train)
+spotifyNorm.test$predictedGenre <- predict(knnModel, spotifyNorm.test, type = "class")
+```
+
+```{r}
+confMatrix <- table(spotifyNorm.test$predictedGenre, spotifyNorm.test$genre)
+
+conf_matrix <- as.matrix(confMatrix)
+
+heatmap(conf_matrix, 
+        Colv = NA, 
+        Rowv = NA, 
+        col = heat.colors(6))
+
+confMatrix
+```
+
+
+
