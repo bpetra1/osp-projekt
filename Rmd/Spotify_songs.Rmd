@@ -6,20 +6,20 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-library(dplyr)
-library(readr)
-library(stringr)
-library(hflights)
-library(tidyr)
-library(lubridate)
-library(ggplot2)
+library(dplyr)    # Biblioteka za manipulaciju podacima
+library(readr)    # Biblioteka za čitanje podataka
+library(stringr)  # Biblioteka za rad s nizovima znakova
+library(tidyr)    # Biblioteka za rad s podacima u širem formatu
+library(lubridate) # Biblioteka za rad s datumima
+library(ggplot2)   # Biblioteka za vizualizaciju podataka
+
 ```
 
 ```{r}
-df <- read.csv("spotify_songs.csv")
-head(df)
-glimpse(df)
-summary(df)
+df <- read.csv("spotify_songs.csv")  # Učitavanje podataka iz CSV datoteke "spotify_songs.csv"
+head(df)                             # Prikaz prvih nekoliko redova podataka
+glimpse(df)                          # Prikaz sažetih informacija o podacima
+summary(df)                          # Prikaz osnovnih statističkih informacija o podacima
 
 ```
 
@@ -37,16 +37,6 @@ ggsave("Genre-Energy.png", bg = "white")
 
 
 ```
-**Naziv grafa:** Distribucija Energije prema Žanrovima Playlista
-
-**Opis:**
-Ovaj boxplot graf prikazuje distribuciju energije (y-osa) na temelju različitih žanrova playlista (x-osa). Svaki boxplot predstavlja jedan žanr, a njegova širina odražava raspon energije unutar tog žanra. Unutar svakog boxplota nalazi se pravokutnik koji predstavlja interkvartilni raspon, a linija unutar pravokutnika označava medijan energije.
-
-Iako su boje živahne (zelena nijansa), važno je primijetiti da se energija ne raspoređuje jednolično među žanrovima. Odsutnost legende ukazuje na to da su boje žanrova ujednačene, ali različite nijanse mogu ukazivati na varijacije unutar samih žanrova.
-
-Dodatno, postojanje "notcha" u sredini svakog boxplota pruža informaciju o razlikama u medijanima između žanrova. Ako se notchovi preklapaju, to može sugerirati da nema značajne razlike u mediani između određenih žanrova.
-
-Ovaj vizualni prikaz pomaže razumjeti raspon energije unutar različitih žanrova playlista, dok notchi i boxplotovi omogućuju usporedbu centralnih mjera energije između tih žanrova.
 
 
 
@@ -62,14 +52,6 @@ ggsave("Dance-Energy-popularity.png", bg = "white")
 
 
 ```
-**Naziv grafa:** Plesnost naspram Energije s Bojom prema Popularnosti
-
-**Opis:**
-Ovaj šareni graf prikazuje odnos između plesnosti (x-osa) i energije (y-osa) za različite glazbene pjesme. Svaka točka na grafu predstavlja pojedinu pjesmu, a njezina boja označava razinu popularnosti. Tamnije crvene nijanse označavaju popularnije pjesme, dok svjetlije plave nijanse ukazuju na manju popularnost.
-
-Unatoč šarenilu grafa, važno je primijetiti da plesnost i energija nisu usko povezane s popularnošću. To znači da ne postoji jasna korelacija između ovih glazbenih karakteristika i razine popularnosti pjesama. Točke se raspršuju po grafu, pokazujući raznolikost glazbenog ukusa i potvrđujući da ne postoji jednostavan obrazac koji bi povezao plesnost, energiju i popularnost.
-
-Graf pruža uvid u raznolikost glazbenih preferencija te naglašava da glazbene osobitosti kao što su plesnost i energija nisu nužno ključni faktori koji određuju popularnost pjesama na temelju analize ovog skupa podataka.
 
 
 ```{r}
@@ -88,15 +70,6 @@ ggsave("Genre-Subgenre.png", bg = "white")
 
 
 ```
-**Naziv grafa:** Raspodjela Žanrova s Podžanrovima na Playlistama
-
-**Opis:**
-Ovaj graf prikazuje broj playlista unutar određenih glavnih žanrova, razdijeljenih prema podžanrovima. Na x-osi su navedeni glavni žanrovi playlista, dok y-osa pokazuje broj playlista. Svaki šareni segment na stupcu predstavlja određeni podžanr unutar glavnog žanra na playlisti.
-
-Stupci su složeni jedan na drugi kako bi se vizualno prikazala distribucija podžanrova u okviru svakog glavnog žanra. Debljina svakog pojedinog stupca predstavlja ukupan broj playlista u određenom glavnom žanru.
-
-Ovaj graf pruža pregled raznolikosti glazbenih playlista u skladu s glavnim žanrovima i dodatno razdvaja podžanrove, omogućavajući bolje razumijevanje kako su playliste distribuirane unutar različitih glazbenih kategorija. Legenda s desne strane prikazuje koje boje predstavljaju određene podžanrove na playlistama.
-
 
 ```{r}
 top_artists <- df %>%
