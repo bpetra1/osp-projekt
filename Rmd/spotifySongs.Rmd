@@ -1,6 +1,6 @@
 ---
 title: "Seminar projek Spotify songs"
-author: "0036542213 Lovro Vuletić"
+author: "Lovro Vuletić"
 date: "`r Sys.Date()`"
 output:
   html_document: default
