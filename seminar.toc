@@ -12,10 +12,12 @@
 \contentsline {subsubsection}{3) Average popularity of songs per year}{8}{subsubsection*.6}%
 \contentsline {subsubsection}{4) Energy Distribution Across Playlist Genre}{9}{subsubsection*.7}%
 \contentsline {subsubsection}{5) Distribution of Genres and Subgenres}{10}{subsubsection*.8}%
-\contentsline {subsubsection}{6) The relationship between energy and valence by genre}{11}{subsubsection*.9}%
-\contentsline {subsubsection}{7) Danceability and Energy with Popularity}{12}{subsubsection*.10}%
-\contentsline {subsubsection}{8) Histogram of song durations}{13}{subsubsection*.11}%
-\contentsline {section}{\numberline {3.4}Prediktivni modeli}{15}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Linearna regresija}{15}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}kNN klasifikacija}{18}{subsection.3.4.2}%
-\contentsline {chapter}{\numberline {4}Zaključak}{20}{chapter.4}%
+\contentsline {subsubsection}{6) Average track popularity by genre}{11}{subsubsection*.9}%
+\contentsline {subsubsection}{7) Average track popularity by subgenre}{12}{subsubsection*.10}%
+\contentsline {subsubsection}{8) The relationship between energy and valence by genre}{13}{subsubsection*.11}%
+\contentsline {subsubsection}{9) Danceability and Energy with Popularity}{14}{subsubsection*.12}%
+\contentsline {subsubsection}{10) Histogram of song durations}{15}{subsubsection*.13}%
+\contentsline {section}{\numberline {3.4}Prediktivni modeli}{17}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Linearna regresija}{17}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}kNN klasifikacija}{20}{subsection.3.4.2}%
+\contentsline {chapter}{\numberline {4}Zaključak}{22}{chapter.4}%

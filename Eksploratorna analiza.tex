@@ -152,9 +152,42 @@
 		\caption{Distribution of Genres and Subgenres}
 		
 	\end{figure}
+	
+	\subsubsection{6) Average track popularity by genre}
+	
+	\textbf{Opis grafa:}
+	
+	Na grafu možemo vidjeti prosječnu popularnost pjesama grupiranih na osnovu žanra playliste u kojoj se nalaze. Možemo vidjeti kako su pop i latin najpopulaniji, dok je edm najmanje popularan među slušačima. 
+	
+	
+	\textbf{Slika grafa:}
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/genre.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{Average track popularity by genre}
+		
+	\end{figure}
+	
+	
+	\subsubsection{7) Average track popularity by subgenre}
+	
+	\textbf{Opis grafa:}
+	
+	Na ovome grafu možemo vidjeti prikaz sličan kao i na prethodnom, međutim sada su pjesme grupirane na temelju podžanra. Boje stupaca označavaju vrstu žanra, kako bismo bolje vidjeli popularnost pojedinih podžanrova s obzirom na njihov žanr.
+	Vidimo kako se ističe post-teen pop, iz čega bi mogli zaključiti da su velik broj korisnika Spotifyja mladu ljudi nakon tinejdžerske dobi.
+	
+	\textbf{Slika grafa:}
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/subgenre.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{Average track popularity by subgenre}
+		
+	\end{figure}
 
 
-		\subsubsection{6) The relationship between energy and valence by genre}
+		\subsubsection{8) The relationship between energy and valence by genre}
     
     \textbf{Opis grafa:}
     
@@ -170,7 +203,7 @@
     \end{figure}
 
 	
-		\subsubsection{7) Danceability and Energy with Popularity}
+		\subsubsection{9) Danceability and Energy with Popularity}
 	
 	\textbf{Opis grafa:}
 	
@@ -188,7 +221,7 @@
 	\end{figure}
 
 
-	\subsubsection{8) Histogram of song durations}
+	\subsubsection{10) Histogram of song durations}
     
     \textbf{Opis grafa:}
     
@@ -211,7 +244,7 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 	
 	\subsection{Linearna regresija}
 	
-	Linearna regresija koristi se za predviđanje vrijednosti varijable s obzirom na vrijednosti jedne ili više drugih. Za određivanje koeficijenata smjera koristi se metoda najmanjih kvadrata. U nastavku pokušat ćemo predvidjeti vrijednost varijable \textit{Energy} s pomoću ostalih numeričkih varijabli iz našeg podatkovnog skupa, tj.koristit ćemo višestruku (multiplu) linearnu regresiju.
+	Linearna regresija koristi se za predviđanje vrijednosti varijable s obzirom na vrijednosti jedne ili više drugih. Za određivanje koeficijenata smjera koristi se metoda najmanjih kvadrata. U nastavku pokušat ćemo predvidjeti vrijednost varijable \textit{energy} s pomoću ostalih numeričkih varijabli iz našeg podatkovnog skupa, tj.koristit ćemo višestruku (multiplu) linearnu regresiju.
 	Za početak provjerit ćemo vrijednosti kolinearnosti ulaznih varijabli.
 	
 	\begin{figure}[H]
@@ -237,7 +270,7 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 	
 	Na temelju izračunatih vrijednosti možemo zaključiti da vrlo vjerojatno nema multikolinearnosti ulaznih varijabli
 	
-	Sada ćemo konačno stvoriti linearni model. Kao što je prije navedeno, varijabla \textit{energy} bit će izlaz, a preostale numeričke varijable ulaz.
+	Sada ćemo konačno stvoriti linearni model. Kao što je već navedeno, varijabla \textit{energy} bit će izlaz, a preostale numeričke varijable ulazi u modelu.
 	Podatkovni okvir razdijeljen je u 2 dijela, jedan za treniranje te jedan za testiranje modela. Veličina okvira za treniranje je 70\% originalnog podatkovnog okvira. 
 	U nastavku prvo slijedi sažetak korištenog linearnog modela.
 	
@@ -250,11 +283,15 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 	\end{figure}
 	
 	Možemo vidjeti da su \textit{danceability, loudness, acousticness, instrumentalness, livenes} i \textit{valence} jako statistički značajni u ovome modelu, \textit{key} ima manje statistički značajan utjecaj, dok \textit{mode} i \textit{speechiness} vrlo vjerojatno nemaju statističkog utjecaja na ovaj model, zbog visoke p-vrijednosti.
+	
 	Rezidualna standardna pogreška (RSE) nam govori koliko u prosjeku model promašuje kod predviđanja izlazne varijable \textit{energy}, a vidimo da iznosi 0.1115.
+	
 	\textit{Multiple R-squared} i \textit{Adjusted R-squared} iznose 0.6319, odnosno 0.6317. R-kvadrat nam govori o količini varijabilnosti koja je objašnjena modelom, a u našem modelu možemo zaključiti da je otprilike 63\% varijabilnosti varijable \textit{energy} objašnjeno modelom. Kako smo koristili višestruku linearnu regresiju više pažnje obratit ćemo na prilagođenu R-kvadrat vrijednost koja prilagođava R-kvadrat mjeru zbog broja prediktora u modelu, međutim vidimo da su otprilike iste.
+	
 	Konačno, F-statistika s p-vrijednosti manjom od \(2.2 \times 10^{-16}\) nam govori da je model statistički značajan u objašnjavanju izlazne varijable.
 	
-	Sada ćemo pomoću koristeći model koji je istreniran nad trening skupom pokušati procijeniti vrijednosti varijable \textit{energy} u testnom podatkovnom okviru. Kako bismo provjerili kvalitetu našeg modela, iskoristit ćemo RMSE (\textit{engl. root mean square error}) mjeru koja iznosi 0.1138, što je otprilike isto kao kod rezidualne pogreške
+	
+	Sada ćemo koristeći model koji je istreniran nad trening skupom pokušati procijeniti vrijednosti varijable \textit{energy} u testnom podatkovnom okviru. Kako bismo provjerili kvalitetu našeg modela, iskoristit ćemo RMSE (\textit{engl. root mean square error}) mjeru koja iznosi 0.1138, što je otprilike isto kao kod rezidualne pogreške
 	
 	\subsection{kNN klasifikacija}
 	
