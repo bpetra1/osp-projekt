@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.27)  21 JAN 2024 13:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.27)  21 JAN 2024 14:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,16 +1205,6 @@ Overfull \hbox (30.62303pt too wide) in paragraph at lines 6--35
  [][] 
  []
 
-<slike/ucitavanje.png, id=67, 582.978pt x 227.6505pt>
-File: slike/ucitavanje.png Graphic file (type png)
-<use slike/ucitavanje.png>
-Package pdftex.def Info: slike/ucitavanje.png  used on input line 43.
-(pdftex.def)             Requested size: 524.67535pt x 204.88354pt.
-
-Overfull \hbox (89.06456pt too wide) in paragraph at lines 43--45
- [][] 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1229,6 +1219,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 ]
+<slike/ucitavanje.png, id=83, 582.978pt x 227.6505pt>
+File: slike/ucitavanje.png Graphic file (type png)
+<use slike/ucitavanje.png>
+Package pdftex.def Info: slike/ucitavanje.png  used on input line 45.
+(pdftex.def)             Requested size: 524.67535pt x 204.88354pt.
+
+Overfull \hbox (89.06456pt too wide) in paragraph at lines 45--47
+ [][] 
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1238,20 +1238,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.63 	
-       <./slike/ucitavanje.png>]
-<slike/Histogram of song popularity.png, id=83, 526.8483pt x 325.215pt>
+l.61 \clearpage
+                <./slike/ucitavanje.png>]
+<slike/Histogram of song popularity.png, id=94, 526.8483pt x 325.215pt>
 File: slike/Histogram of song popularity.png Graphic file (type png)
 <use slike/Histogram of song popularity.png>
 Package pdftex.def Info: slike/Histogram of song popularity.png  used on input 
-line 73.
+line 75.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 73--76
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 75--78
  [][] 
  []
 
@@ -1264,25 +1266,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.84 	O
+l.86 	O
        vaj graf prikazuje deset najpopularnijih glazbenih izvođača temelje...
  <./slike/Histogram of song popularity.png>]
-Overfull \hbox (28.95601pt too wide) in paragraph at lines 88--89
+Overfull \hbox (28.95601pt too wide) in paragraph at lines 90--91
 []\OT1/jkp/m/n/12 Ovaj graf pru[]za brz i pre-gle-dan na[]cin us-po-redbe po-pu
 -lar-nosti izvo[]da[]ca, omogu[]cuju[]ci
  []
 
-<slike/Top 10 popularity.png, id=93, 526.8483pt x 325.215pt>
+<slike/Top 10 popularity.png, id=103, 526.8483pt x 325.215pt>
 File: slike/Top 10 popularity.png Graphic file (type png)
 <use slike/Top 10 popularity.png>
-Package pdftex.def Info: slike/Top 10 popularity.png  used on input line 92.
+Package pdftex.def Info: slike/Top 10 popularity.png  used on input line 94.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 92--95
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 94--97
  [][] 
  []
 
@@ -1299,24 +1303,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.106 
+l.108 
        <./slike/Top 10 popularity.png>]
-<slike/Average popularity of songs per year.png, id=102, 526.8483pt x 325.215pt
+<slike/Average popularity of songs per year.png, id=112, 526.8483pt x 325.215pt
 >
 File: slike/Average popularity of songs per year.png Graphic file (type png)
 <use slike/Average popularity of songs per year.png>
 Package pdftex.def Info: slike/Average popularity of songs per year.png  used o
-n input line 110.
+n input line 112.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 110--113
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 112--115
  [][] 
  []
 
-<slike/Genre-Energy.png, id=103, 361.8318pt x 223.3143pt>
+<slike/Genre-Energy.png, id=113, 361.8318pt x 223.3143pt>
 File: slike/Genre-Energy.png Graphic file (type png)
 <use slike/Genre-Energy.png>
-Package pdftex.def Info: slike/Genre-Energy.png  used on input line 128.
+Package pdftex.def Info: slike/Genre-Energy.png  used on input line 130.
 (pdftex.def)             Requested size: 325.64561pt x 200.98099pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1331,20 +1335,20 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.134 	
+l.136 	
         <./slike/Average popularity of songs per year.png>]
-Overfull \hbox (30.08165pt too wide) in paragraph at lines 141--142
+Overfull \hbox (30.08165pt too wide) in paragraph at lines 143--144
 []\OT1/jkp/m/n/12 Stupci su slo[]zeni je-dan na drugi kako bi se vi-zu-alno pri
 -ka-zala dis-tri-bu-cija pod[]zanrova
  []
 
-<slike/Genre-Subgenre.png, id=111, 526.8483pt x 325.215pt>
+<slike/Genre-Subgenre.png, id=121, 526.8483pt x 325.215pt>
 File: slike/Genre-Subgenre.png Graphic file (type png)
 <use slike/Genre-Subgenre.png>
-Package pdftex.def Info: slike/Genre-Subgenre.png  used on input line 146.
+Package pdftex.def Info: slike/Genre-Subgenre.png  used on input line 148.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 146--149
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 148--151
  [][] 
  []
 
@@ -1361,18 +1365,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.152 
+l.154 
        <./slike/Genre-Energy.png>]
-<slike/The relationship between energy and valence by genre.png, id=119, 526.84
+<slike/The relationship between energy and valence by genre.png, id=129, 526.84
 83pt x 325.215pt>
 File: slike/The relationship between energy and valence by genre.png Graphic fi
 le (type png)
 <use slike/The relationship between energy and valence by genre.png>
 Package pdftex.def Info: slike/The relationship between energy and valence by g
-enre.png  used on input line 162.
+enre.png  used on input line 164.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 162--165
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 164--167
  [][] 
  []
 
@@ -1389,16 +1393,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.168 
+l.170 
        <./slike/Genre-Subgenre.png>]
-<slike/Dance-Energy-popularity.png, id=127, 526.8483pt x 325.215pt>
+<slike/Dance-Energy-popularity.png, id=137, 526.8483pt x 325.215pt>
 File: slike/Dance-Energy-popularity.png Graphic file (type png)
 <use slike/Dance-Energy-popularity.png>
 Package pdftex.def Info: slike/Dance-Energy-popularity.png  used on input line 
-180.
+182.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 180--183
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 182--185
  [][] 
  []
 
@@ -1415,16 +1419,16 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.186 
+l.188 
        <./slike/The relationship between energy and valence by genre.png>]
-<slike/Histogram of song durations.png, id=135, 526.8483pt x 325.215pt>
+<slike/Histogram of song durations.png, id=146, 526.8483pt x 325.215pt>
 File: slike/Histogram of song durations.png Graphic file (type png)
 <use slike/Histogram of song durations.png>
 Package pdftex.def Info: slike/Histogram of song durations.png  used on input l
-ine 197.
+ine 199.
 (pdftex.def)             Requested size: 474.15909pt x 292.6908pt.
 
-Overfull \hbox (38.5483pt too wide) in paragraph at lines 197--200
+Overfull \hbox (38.5483pt too wide) in paragraph at lines 199--202
  [][] 
  []
 
@@ -1441,18 +1445,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.203 
+l.205 
        <./slike/Dance-Energy-popularity.png>]
-<slike/corrplot.png, id=145, 505.89pt x 361.35pt>
-File: slike/corrplot.png Graphic file (type png)
-<use slike/corrplot.png>
-Package pdftex.def Info: slike/corrplot.png  used on input line 213.
-(pdftex.def)             Requested size: 455.29678pt x 325.21199pt.
-
-Overfull \hbox (19.68599pt too wide) in paragraph at lines 213--216
- [][] 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1466,13 +1460,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.219 	
-        <./slike/Histogram of song durations.png>]
-<slike/vif.png, id=153, 392.06474pt x 90.93974pt>
-File: slike/vif.png Graphic file (type png)
-<use slike/vif.png>
-Package pdftex.def Info: slike/vif.png  used on input line 226.
-(pdftex.def)             Requested size: 352.855pt x 81.84499pt.
+l.206 \clearpage
+                 <./slike/Histogram of song durations.png>]
+<slike/corrplot.png, id=161, 505.89pt x 361.35pt>
+File: slike/corrplot.png Graphic file (type png)
+<use slike/corrplot.png>
+Package pdftex.def Info: slike/corrplot.png  used on input line 217.
+(pdftex.def)             Requested size: 455.29678pt x 325.21199pt.
+
+Overfull \hbox (19.68599pt too wide) in paragraph at lines 217--220
+ [][] 
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1483,24 +1481,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.10})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.235 	S
-        ada ćemo konačno stvoriti linearni model. Kao što je prije navede...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.235 	S
-        ada ćemo konačno stvoriti linearni model. Kao što je prije navede...
- <./slike/corrplot.png (PNG copy)> <./slike/vif.png>]
-<slike/linReg.png, id=162, 377.61075pt x 399.29175pt>
+l.226 	
+        <./slike/corrplot.png (PNG copy)>]
+<slike/vif.png, id=169, 392.06474pt x 90.93974pt>
+File: slike/vif.png Graphic file (type png)
+<use slike/vif.png>
+Package pdftex.def Info: slike/vif.png  used on input line 230.
+(pdftex.def)             Requested size: 352.855pt x 81.84499pt.
+<slike/linReg.png, id=170, 377.61075pt x 399.29175pt>
 File: slike/linReg.png Graphic file (type png)
 <use slike/linReg.png>
-Package pdftex.def Info: slike/linReg.png  used on input line 240.
+Package pdftex.def Info: slike/linReg.png  used on input line 244.
 (pdftex.def)             Requested size: 339.84653pt x 359.35925pt.
 
 
@@ -1512,13 +1509,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15
-pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.251 	
-        <./slike/linReg.png>]
-Overfull \hbox (11.84166pt too wide) in paragraph at lines 252--253
+l.250 	
+        <./slike/vif.png>]
+Overfull \hbox (11.84166pt too wide) in paragraph at lines 256--257
 []\OT1/jkp/m/n/12 Sada []cemo pomo[]cu ko-riste[]ci mo-del koji je is-tre-ni-ra
 n nad tre-ning sku-pom poku[]sati
  []
@@ -1531,7 +1528,59 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16])
+[16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.12})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.257 	
+        <./slike/linReg.png>]
+<slike/confMatrix.png, id=187, 191.5155pt x 105.39375pt>
+File: slike/confMatrix.png Graphic file (type png)
+<use slike/confMatrix.png>
+Package pdftex.def Info: slike/confMatrix.png  used on input line 269.
+(pdftex.def)             Requested size: 172.36234pt x 94.85349pt.
+<slike/heatmap.png, id=188, 505.89pt x 361.35pt>
+File: slike/heatmap.png Graphic file (type png)
+<use slike/heatmap.png>
+Package pdftex.def Info: slike/heatmap.png  used on input line 279.
+(pdftex.def)             Requested size: 455.29678pt x 325.21199pt.
+
+Overfull \hbox (19.68599pt too wide) in paragraph at lines 279--282
+ [][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.13})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.285 	S
+        vjetlije boje označavaju veći broj predikcija za tu kombinaciju re...
+ <./slike/confMatrix.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.14})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.287 \eject
+             <./slike/heatmap.png>])
 \openout2 = `Zaključak.aux'.
 
  (./Zaključak.tex
@@ -1544,7 +1593,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17
+[19
 
 
 
@@ -1558,25 +1607,25 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
 Package rerunfilecheck Info: File `seminar.out' has not changed.
-(rerunfilecheck)             Checksum: E93939A971CAF6C266ACD7CE54317966;1116.
+(rerunfilecheck)             Checksum: 1C6C273AFC094AE666F33EF3D1492940;1420.
  ) 
 Here is how much of TeX's memory you used:
- 17878 strings out of 474398
- 293177 string characters out of 5754205
- 1942036 words of memory out of 5000000
- 39605 multiletter control sequences out of 15000+600000
- 585978 words of font info for 93 fonts, out of 8000000 for 9000
+ 17906 strings out of 474398
+ 293718 string characters out of 5754205
+ 1941036 words of memory out of 5000000
+ 39625 multiletter control sequences out of 15000+600000
+ 587757 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,14n,93p,571b,486s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,14n,93p,571b,472s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb><c:/texliv
 e/2023/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb><c:/texlive/2023/texmf-d
 ist/fonts/type1/public/kpfonts/jkpmit8a.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/public/kpfonts/jkpmn8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
 kpfonts/jkpsy.pfb>
-Output written on seminar.pdf (18 pages, 2949003 bytes).
+Output written on seminar.pdf (20 pages, 2969099 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 247 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

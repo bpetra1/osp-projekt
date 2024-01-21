@@ -33,6 +33,8 @@
 	\caption{Opis tablice podataka o glazbi}
 	\label{tab:glazba}
 	\end{table}
+
+\clearpage
 \section{Proces učitavanja i prilagodbe podataka}
 
 	\subsubsection{Proces učitavanja podataka}
@@ -56,7 +58,7 @@
 	
 
 
-
+\clearpage
 \section{Vizualizacija Podataka}
 	Vizualizacija podataka postaje ključna komponenta analize i interpretacije kompleksnih skupova podataka. 
 	U ovom podpoglavlju istražujemo moć vizualizacije u kontekstu glazbene platforme Spotify, prezentirajući neke od grafova kako bismo bolje razumjeli glazbene obrasce, preferencije slušatelja te dinamiku glazbene industrije.
@@ -201,10 +203,12 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
         
     \end{figure}
 
-
+\clearpage
 \section{Prediktivni modeli}
 
-	U nastavku bit će opisan rad s osnovnim prediktivnim modelima: linearna regresija te kNN klasifikacijski model. 
+	U nastavku bit će opisan rad s osnovnim prediktivnim modelima: linearna regresija te kNN klasifikacija. 
+	
+	\subsection{Linearna regresija}
 	
 	Linearna regresija koristi se za predviđanje vrijednosti varijable s obzirom na vrijednosti jedne ili više drugih. Za određivanje koeficijenata smjera koristi se metoda najmanjih kvadrata. U nastavku pokušat ćemo predvidjeti vrijednost varijable \textit{Energy} s pomoću ostalih numeričkih varijabli iz našeg podatkovnog skupa, tj.koristit ćemo višestruku (multiplu) linearnu regresiju.
 	Za početak provjerit ćemo vrijednosti kolinearnosti ulaznih varijabli.
@@ -233,7 +237,7 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 	Na temelju izračunatih vrijednosti možemo zaključiti da vrlo vjerojatno nema multikolinearnosti ulaznih varijabli
 	
 	Sada ćemo konačno stvoriti linearni model. Kao što je prije navedeno, varijabla \textit{energy} bit će izlaz, a preostale numeričke varijable ulaz.
-	Podatkovni okvir razdijeljen je u 2 dijela, jedan za treniranje te jedan za testiranje modela. Veličina okvira za treniranje je 70\% originalnog podatkovnog skupa. 
+	Podatkovni okvir razdijeljen je u 2 dijela, jedan za treniranje te jedan za testiranje modela. Veličina okvira za treniranje je 70\% originalnog podatkovnog okvira. 
 	U nastavku prvo slijedi sažetak korištenog linearnog modela.
 	
 	\begin{figure}[H]
@@ -250,6 +254,36 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
 	Konačno, F-statistika s p-vrijednosti manjom od \(2.2 \times 10^{-16}\) nam govori da je model statistički značajan u objašnjavanju izlazne varijable.
 	
 	Sada ćemo pomoću koristeći model koji je istreniran nad trening skupom pokušati procijeniti vrijednosti varijable \textit{energy} u testnom podatkovnom okviru. Kako bismo provjerili kvalitetu našeg modela, iskoristit ćemo RMSE (\textit{engl. root mean square error}) mjeru koja iznosi 0.1138, što je otprilike isto kao kod rezidualne pogreške
+	
+	\subsection{kNN klasifikacija}
+	
+	Ovaj klasifikacijski prediktivni model koristit ćemo za predviđanje kategorijske varijable \textit{genre}. Kako se određena pjesma može nalaziti na više playlista, a svaka playlista može imati drugačiji žanr, za početak ćemo odrediti da ako se pjesma nalazi na više playlista, sve te retke ćemo spojiti u jedan koji će pjesmi pridružiti onaj žanr na kojem pjesma ima najviše playlista. 
+	
+	Kao i kod linearne regresije podatkovni okvir bit će razdijeljen u trening i test ovkir. Također, kako je ovo klasifikacijski model podrazumijeva se da je ciljna varijabla \textit{genre} faktorizirana varijabla. Također sve numeričke varijable bit će normalizirane i svedene na istu skalu vrijednosti. 
+	
+	Kako je već navedeno, izlazna varijabla bit će \textit{genre}, a ulazne sve numeričke varijable u okviru, tj. \textit{track\_popularity, danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, duration\_ms}
+	
+	Kako bismo provjerili uspješnost modela koristit ćemo matricu konfuzije čiji izgled se nalazi u nastavku. Retci označavaju stvarne vrijednosti, a stupci predviđene vrijednosti.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/confMatrix.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{Confusion matrix}
+		
+	\end{figure}
+	
+	Sada ćemo prikazati ovu matricu kao \textit{heatmap}
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/heatmap.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{Confusion matrix heatmap}
+		
+	\end{figure}
+	Svjetlije boje označavaju veći broj predikcija za tu kombinaciju retka i stupca. Vidimo kako je dijagonala najsvjetlija, što označava točne predikcije. Također postoje mnoge krive predikcije, pogotovo između pop i latin te rap i r\&b glazbe, što je donekle očekivano s obzirom na mnoge sličnosti između navedenih tipova glazbe.
+	
 \eject
 
 
