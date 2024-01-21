@@ -202,6 +202,50 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
     \end{figure}
 
 
+\section{Prediktivni modeli}
+
+	U nastavku bit će opisan rad s osnovnim prediktivnim modelima: linearna regresija te kNN klasifikacijski model. 
+	Linearna regresija koristi se za predviđanje vrijednosti varijable s obzirom na vrijednosti jedne ili više drugih. Za određivanje koeficijenata smjera koristi se metoda najmanjih kvadrata. U nastavku pokušat ćemo predvidjeti vrijednost varijable \textit{Energy} s pomoću ostalih numeričkih varijabli iz našeg podatkovnog skupa, tj.koristit ćemo višestruku (multiplu) linearnu regresiju.
+	Za početak provjerit ćemo vrijednosti kolinearnosti ulaznih varijabli.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/corrplot.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{Correlation of input variables}
+		
+	\end{figure}
+	
+	Možemo primijetiti da \textit{Energy} i \textit{Loudness} imaju poprilično visoku pozitivnu korelaciju, što je i očekivano. \textit{Danceability} i \textit{Valence} također imaju pozitivnu korelaciju, međutim s manjom vrijednosti, što nam govori da je moguće da "plesne" pjesme imaju veću valenciju, tj. pozitivnost.
+	S druge strane, \textit{Acousticness} i \textit{Energy} te \textit{Acousticness} i \textit{Loudness} imaju negativnu korelaciju, što znači da akustične trake većinom imaju manju energiju te manju glasnoću.
+	
+	Za provjeru moguće multikolinearnosti koristit ćemo VIF mjeru koju ćemo izračunati i čiji rezultat se nalazi u nastavku:
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/vif.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{VIF}
+		
+	\end{figure}
+	
+	Na temelju izračunatih vrijednosti možemo zaključiti da vrlo vjerojatno nema multikolinearnosti ulaznih varijabli
+	
+	Sada ćemo konačno stvoriti linearni model. Kao što je prije navedeno, varijabla \textit{Energy} bit će izlaz, a preostale numeričke varijable ulaz.
+	Podatkovni okvir razdijeljen je u 2 dijela, jedan za treniranje te jedan za testiranje modela metodom nasumičnog odabira. Veličina okvira za treniranje je 70\% originalnog podatkovnog skupa. 
+	U nastavku prvo slijedi sažetak korištenog linearnog modela.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/linReg.png}
+		%veličina slike u odnosu na originalnu datoteku i pozicija slike
+		\centering
+		\caption{Linear regression summary}
+		
+	\end{figure}
+	
+	
+	........sutra nastavak..........
+
 \eject
 
 
