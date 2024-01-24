@@ -42,9 +42,9 @@
 		\textbf{Učitavanje podataka:}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.9]{slike/ucitavanje.png}
+			\includegraphics[scale=0.9]{slike/spotify.png}
 			% Veličina slike u odnosu na originalnu datoteku i pozicija slike
-			\caption{\textbf{Učitavanje podataka u R-u}}
+			\caption{\textbf{Učitavanje podatkovnog okvira \textit{spotify\_songs}}}
 		\end{figure}
 		
 		U prikazanom kodu sa slike, koristimo različite R pakete kako bismo pripremili i istražili skup podataka "spotify\_songs.csv". Prvo, koristimo pakete poput \textbf{readr}, \textbf{dplyr} i \textbf{stringr} za čitanje i manipulaciju podacima. Nakon toga, prikazujemo prvih nekoliko redova podataka pomoću funkcije \textbf{head} kako bismo dobili inicijalni uvid u strukturu podataka.
@@ -52,10 +52,37 @@
 		Zatim, koristimo funkciju \textbf{glimpse} za detaljniji pregled strukture podataka, prikazujući informacije o varijablama, njihovim tipovima podataka i prvim redovima podataka. Na kraju, koristimo funkciju \textbf{summary} kako bismo dobili osnovne statističke informacije o numeričkim varijablama u skupu podataka.
 		
 		Ovi koraci omogućuju nam osnovni uvid u strukturu podataka prije nego što nastavimo s daljnjom analizom i vizualizacijom.
-
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/head.png}
+		\centering
+		\caption{Rezultat poziva \textit{head} funckije}
+		
+	\end{figure}
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/glimpse.png}
+		\centering
+		\caption{Rezultat poziva \textit{glimpse} funckije}
+		
+	\end{figure}
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/summary.png}
+		\centering
+		\caption{Rezultat poziva \textit{summary} funckije}
+		
+	\end{figure}
 	
 	\subsubsection{Proces prilagodbe podataka}
 	Stupce \textit{playlist\_genre} te \textit{playlist\_subgenre} pretvorili smo u u faktore s obzirom da postoji određen broj kategorija jedne i druge varijable. U podatkovnom okviru također postoji 5 redaka s null vrijednostima, koji su izbačeni radi lakšeg rada s grafovima.
+	
+	\begin{figure}[H]
+		\includegraphics[scale=0.9]{slike/prilagodba.png}
+		\centering
+		\caption{Prilagodba podataka}
+		
+	\end{figure}
 	
 
 
@@ -138,7 +165,8 @@
 	
 	\textbf{Opis grafa:}
 	
-	Na x osi nalazi se ime albuma, dok se na y osi nalazi prosječna popularnost pjesme u tom albumu. 
+	Na x osi nalazi se ime albuma, dok se na y osi nalazi prosječna popularnost pjesme u tom albumu. Vidimo kako su u prosjeku pjesme s albuma \textit{JACKBOYS, WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?, The Academy, Rare} i ostali najpopularnije.
+	
 	
 	\textbf{Slika grafa:}
 	\begin{figure}[H]
@@ -153,8 +181,7 @@
 	
 	\textbf{Opis grafa:}
 	
-	Na y osi nalaze se 10 najpopularnijih playlista, a na y os nam govori zbroj popularnosti svih pjesama u toj playlisti. Legenda prikazuje žanr pojedinih playlista 
-	
+	Na y osi nalaze se 10 najpopularnijih playlista, a na y os nam govori zbroj popularnosti svih pjesama u toj playlisti. Legenda prikazuje žanr pojedinih playlista. 
 	\textbf{Slika grafa:}
 	\begin{figure}[H]
 		\includegraphics[scale=0.9]{slike/playlists_by_popularity.png}
@@ -254,7 +281,7 @@
     
     \textbf{Opis grafa:}
     
-Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se različite razine trajanju u sekundama, dok y-os predstavlja broj pjesma u pojedinoj razini. Ovaj zanimljiv histogram omogućava vizualni o najčešćem trajanju pjesama.
+Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se različite razine trajanju u sekundama, dok y-os predstavlja broj pjesma u pojedinoj razini. Ovaj zanimljiv histogram omogućava vizualnu interpretaciju o najčešćem trajanju pjesama.
     
 
     \textbf{Slika grafa:}
@@ -270,7 +297,7 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
     
     \textbf{Opis grafa:}
     
-    Graf prikazuje odnos pupularnosti pjesme s njenom energijom.
+    Graf prikazuje odnos pupularnosti pjesme s njenom energijom. Vidimo kako se linija energije uglavnom kreće oko vrijednosti 0.7, dok je vidljiv mali pad do vrijednosti 0.6 prema kraju x-osi, te ponovno porast do vrijednosti 0.7 na kraju grafa. Ove veće oscilacije na kraju grafa možemo pripisati manjem broju pjesama s velikom vrijednosti varijable \textit{popularity}.
     
     
     \textbf{Slika grafa:}
@@ -285,7 +312,7 @@ Ovaj graf pruža uvid u distribuciju trajanja pjesama. Na x-osi nalaze se razli�
     
     \textbf{Opis grafa:}
     
-    Graf prikazuje odnos popularnosti pjesme s njenom plesnošću.
+    Graf prikazuje odnos popularnosti pjesme s njenom plesnošću. Ovdje je funkcija koja prikazuje plesnost uglavnom ravnomjerno raspoređena oko vrijednosti 0.65, dok je s porastom popularnosti vidljiv blagi porast funkcije.
     
     
     \textbf{Slika grafa:}
