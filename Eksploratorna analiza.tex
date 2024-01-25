@@ -42,37 +42,44 @@
 		\textbf{Učitavanje podataka:}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.9]{slike/spotify.png}
+			\includegraphics[scale=0.7]{slike/ucitavanje.png}
+			% Veličina slike u odnosu na originalnu datoteku i pozicija slike
+			\caption{\textbf{Korištene biblioteke \textit{}}}
+		\end{figure}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.7]{slike/spotify.png}
 			% Veličina slike u odnosu na originalnu datoteku i pozicija slike
 			\caption{\textbf{Učitavanje podatkovnog okvira \textit{spotify\_songs}}}
 		\end{figure}
 		
-		U prikazanom kodu sa slike, koristimo različite R pakete kako bismo pripremili i istražili skup podataka "spotify\_songs.csv". Prvo, koristimo pakete poput \textbf{readr}, \textbf{dplyr} i \textbf{stringr} za čitanje i manipulaciju podacima. Nakon toga, prikazujemo prvih nekoliko redova podataka pomoću funkcije \textbf{head} kako bismo dobili inicijalni uvid u strukturu podataka.
+		\begin{figure}[H]
+			\includegraphics[scale=0.7]{slike/head.png}
+			\centering
+			\caption{Rezultat poziva \textit{head} funckije}
+			
+		\end{figure}
+		
+		\begin{figure}[H]
+			\includegraphics[scale=0.7]{slike/glimpse.png}
+			\centering
+			\caption{Rezultat poziva \textit{glimpse} funckije}
+			
+		\end{figure}
+		
+		\begin{figure}[H]
+			\includegraphics[scale=0.7]{slike/summary.png}
+			\centering
+			\caption{Rezultat poziva \textit{summary} funckije}
+			
+		\end{figure}
+		
+		U prikazanim kodovima sa slika, koristimo različite R pakete kako bismo pripremili i istražili skup podataka "spotify\_songs.csv". Prvo, koristimo pakete poput \textbf{readr}, \textbf{dplyr} i \textbf{stringr} za čitanje i manipulaciju podacima. Nakon toga, prikazujemo prvih nekoliko redova podataka pomoću funkcije \textbf{head} kako bismo dobili inicijalni uvid u strukturu podataka.
 		
 		Zatim, koristimo funkciju \textbf{glimpse} za detaljniji pregled strukture podataka, prikazujući informacije o varijablama, njihovim tipovima podataka i prvim redovima podataka. Na kraju, koristimo funkciju \textbf{summary} kako bismo dobili osnovne statističke informacije o numeričkim varijablama u skupu podataka.
 		
 		Ovi koraci omogućuju nam osnovni uvid u strukturu podataka prije nego što nastavimo s daljnjom analizom i vizualizacijom.
-	
-	\begin{figure}[H]
-		\includegraphics[scale=0.9]{slike/head.png}
-		\centering
-		\caption{Rezultat poziva \textit{head} funckije}
 		
-	\end{figure}
-	
-	\begin{figure}[H]
-		\includegraphics[scale=0.9]{slike/glimpse.png}
-		\centering
-		\caption{Rezultat poziva \textit{glimpse} funckije}
-		
-	\end{figure}
-	
-	\begin{figure}[H]
-		\includegraphics[scale=0.9]{slike/summary.png}
-		\centering
-		\caption{Rezultat poziva \textit{summary} funckije}
-		
-	\end{figure}
 	
 	\subsubsection{Proces prilagodbe podataka}
 	Stupce \textit{playlist\_genre} te \textit{playlist\_subgenre} pretvorili smo u u faktore s obzirom da postoji određen broj kategorija jedne i druge varijable. U podatkovnom okviru također postoji 5 redaka s null vrijednostima, koji su izbačeni radi lakšeg rada s grafovima.
